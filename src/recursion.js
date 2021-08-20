@@ -276,10 +276,27 @@ var divide = function(x, y) {
 	if (y === 1) return x;
 	if (x === 0) return 0;
 	if (x === y) return 1;
-	
-	if (x > y) {
-		return 1 + divide(x-y, y);
-	}
+
+	switch (true) {
+
+		case ((x > 0) && (y > 0)):
+			return 1 + divide(x-y, y);
+		break;
+
+		case ((x < 0) && (y > 0)):
+
+		//to do
+		break;
+
+		case ((x > 0) && (y < 0)):
+
+		//to do
+		break;
+
+		case ((x < 0) && (y < 0)):
+
+		//to do
+		break;
 
 	return 0;
 };
